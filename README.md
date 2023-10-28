@@ -24,13 +24,13 @@ Determine if is it possible to predict loan risk given the following information
 
 * scikit-learn Logistic Regression model with lbfgs solver:
   * Regarding "healthy" loans:
-    * Out of all the loans that the model predicted a "healthy" loan, 100% (rounded) were "healthy" per the classification report
+    * (precision score) Out of all the loans that the model predicted a "healthy" loan, 100% (rounded) were "healthy" per the classification report 
       * Referring to the confusion matrix, the 100% is really 99.7% (18,663/18,719) which is important to understand to align with the "high-risk" results (i.e., 0.3% of the loans predicted to be "healthy" were actually "high-risk")
-    * the model correctly predicted 99% of the actual "healthy" loans (i.e., 1% of the "healthy" loans were predicted to be "high-risk")
+    * (recall score) the model correctly predicted 99% of the actual "healthy" loans (i.e., 1% of the "healthy" loans were predicted to be "high-risk")
   * Regarding "high-risk" loans:
-    * Out of all the loans that the model predicted to be "high-risk", only 85% actually were "high-risk" (i.e., 15% of the loans predicted to be "high-risk" were actually "healthy")
-    * the model correctly predicted 91% of the actual "high-risk" loans (i.e. 9% of the "high-risk" loans were predicted to be "healthy")
-  * Overall this model provides 99% accuracy but due to the data available, that rating is heavily weighted to "healthy" loans.
+    * (precision score) Out of all the loans that the model predicted to be "high-risk", only 85% actually were "high-risk" (i.e., 15% of the loans predicted to be "high-risk" were actually "healthy")
+    * (recall score) the model correctly predicted 91% of the actual "high-risk" loans (i.e. 9% of the "high-risk" loans were predicted to be "healthy")
+  * (accuracy score) Overall this model provides 99% accuracy but due to the data available, that rating is heavily weighted to "healthy" loans.
 
 Logistic Regression Confusion Matrix | Logistic Regression Classification Report 
 :-------------------------:|:-------------------------:
